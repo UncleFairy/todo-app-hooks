@@ -1,6 +1,6 @@
 import React from "react";
 import { IoMdClose, IoMdCheckmark } from "react-icons/io";
-import "./style.css";
+import "./styles.css";
 
 function Todo() {
   return (
@@ -16,10 +16,7 @@ function Todo() {
             </button>
           </div>
           <div className="col-sm-10 nopadding">
-            <input
-              type="text"
-              className="full-width todo-element-height todo-input"
-            />
+            <p className='full-width todo-element-height todo-p'>Задание номер 1</p>
           </div>
           <div className="col-sm-1 nopadding">
             <button className="full-width todo-element-height todo-button">
