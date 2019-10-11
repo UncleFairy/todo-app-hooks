@@ -3,11 +3,14 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
+import reducer from "../src/components/todo/reducers";
+import {} from "../src/components/todo/reducers/";
 
 const store = createStore(
-  () => null,
+  reducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
+
 ReactDOM.render(
   <Provider store={store}>
     <App />

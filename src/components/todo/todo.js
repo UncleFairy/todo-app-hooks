@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { IoMdClose, IoMdCheckmark } from "react-icons/io";
 import "./styles.css";
+import { connect } from "react-redux";
+import { completeTodo, uncompleteTodo } from "./actions";
+import PropTypes from "prop-types";
 
-function Todo() {
+function Todo(props) {
+  const [isCompleted, setIsCompleted] = useState(props.isCompleted);
+
+  const handleChangeIsCompleted = status => () => {
+    setIsCompleted(status);
+    if (status) props.completed(props.id, props.text);
+    else props.uncompleted(props.id, props.text);
+  };
+
   return (
     <div className="todo-wrapper">
       <div className="container">
@@ -10,16 +21,21 @@ function Todo() {
           <div className="col-sm-1 nopadding">
             <button
               className="full-width todo-element-height todo-button"
-              onClick={null}
+              onClick={handleChangeIsCompleted(true)}
             >
               <IoMdCheckmark className="todo-button-image" />
             </button>
           </div>
           <div className="col-sm-10 nopadding">
-            <p className='full-width todo-element-height todo-p'>Задание номер 1</p>
+            <p className="full-width todo-element-height todo-p">
+              {props.text}
+            </p>
           </div>
           <div className="col-sm-1 nopadding">
-            <button className="full-width todo-element-height todo-button">
+            <button
+              className="full-width todo-element-height todo-button"
+              onClick={handleChangeIsCompleted(false)}
+            >
               <IoMdClose className="todo-button-image" />
             </button>
           </div>
@@ -29,10 +45,22 @@ function Todo() {
   );
 }
 
-export default Todo;
+Todo.propTypes = {
+  id: PropTypes.number.isRequired,
+  isCompleted: PropTypes.bool.isRequired,
+  text: PropTypes.string.isRequired,
+  completed: PropTypes.func.isRequired,
+  uncompleted: PropTypes.func.isRequired
+};
 
-// {/*<div style={{height: '50px', width: '600px', border: "1px solid black", margin: '0 auto'}}>*/}
-// {/*  <button style={{height: '50px', width: '50px', margin: 0}}><IoMdCheckmark /></button>*/}
-// {/*  <input type='text' style={{height: '50px', width: '500px', margin: 0}}/>*/}
-// {/*  <button style={{height: '50px', width: '50px', margin: 0}}><IoMdClose /></button>*/}
-// {/*</div>*/}
+const mapDispatchToProps = dispatch => {
+  return {
+    completed: (id, text) => dispatch(completeTodo(id, text)),
+    uncompleted: (id, text) => dispatch(uncompleteTodo(id, text))
+  };
+};
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(Todo);
