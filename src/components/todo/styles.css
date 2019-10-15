@@ -1,13 +1,12 @@
 .todo-wrapper {
   width: 600px;
-  height: 50px;
   border: 1px solid #b2b8b4;
   margin: 0 auto;
   overflow: hidden;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
 .todo-element-height {
-  height: 50px;
+  height: 55px;
 }
 .todo-p {
   border: 0px;

@@ -1,18 +1,27 @@
 import React from "react";
 import { connect } from "react-redux";
 import Todo from "../todo/todo";
+import PropTypes from "prop-types";
 
-function TodoList(props) {
-  console.log(props);
-  return props.todos.map(todo => (
+function TodoList({ todos }) {
+  // console.log(props);
+  return todos.map(todo => (
     <Todo id={todo.id} text={todo.text} isCompleted={todo.isCompleted} />
   ));
 }
 
-function mapStateToProps(state) {
-  return {
+TodoList.propTypes = {
+  todos: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      isCompleted: PropTypes.bool.isRequired,
+      text: PropTypes.string.isRequired
+    })
+  )
+};
+
+const mapStateToProps = state => ({
     todos: state.todos
-  };
-}
+})
 
 export default connect(mapStateToProps)(TodoList);

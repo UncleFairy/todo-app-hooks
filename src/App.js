@@ -1,5 +1,6 @@
 import React from "react";
-import Todo from "./components/todo/todo";
+import TodoList from "./components/todoList/todoList";
+import TodoInput from "./components/todoInput/todoInput";
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
       >
         todos
       </h1>
-      <Todo />
+      <TodoInput />
+      <TodoList />
     </div>
   );
 }

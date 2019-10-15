@@ -3,11 +3,12 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
-import reducer from "../src/components/todo/reducers";
-import {} from "../src/components/todo/reducers/";
+import rootReducer from "./rootReducer";
+
+console.log(rootReducer)
 
 const store = createStore(
-  reducer,
+  rootReducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 

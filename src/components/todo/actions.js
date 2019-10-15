@@ -1,12 +1,14 @@
+import {TODOS} from "./types";
+
 export const completeTodo = id => ({
-  type: "COMPLETED_TODO",
+  type: TODOS.COMPLETE_TODO,
   payload: {
     id
   }
 });
 
 export const uncompleteTodo = id => ({
-  type: "UNCOMPLETED_TODO",
+  type: TODOS.UNCOMPLETED_TODO,
   payload: {
     id
   }

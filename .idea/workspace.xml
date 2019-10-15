@@ -2,14 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c98b23ed-d769-4480-9cae-27d6f079bc48" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/todo/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/todo/reducers/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/todo/reducers/todo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/todoList/todoList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/todo/types.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rootReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/todo/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todo/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/todo/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todo/reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/todo/reducers/todo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todo/reducers/todo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/todo/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todo/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/todo/todo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todo/todo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/todoInput/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todoInput/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/todoInput/todoInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todoInput/todoInput.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/todoList/todoList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todoList/todoList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,8 +42,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/todo" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\dpislari\AppData\Roaming\npm\node_modules\prettier" />
@@ -90,7 +100,8 @@
       <workItem from="1570696612788" duration="1302000" />
       <workItem from="1570698318327" duration="914000" />
       <workItem from="1570699254216" duration="534000" />
-      <workItem from="1570699813340" duration="19611000" />
+      <workItem from="1570699813340" duration="22137000" />
+      <workItem from="1570785937694" duration="18831000" />
     </task>
     <servers />
   </component>

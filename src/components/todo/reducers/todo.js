@@ -1,19 +1,28 @@
-const initialState = [{ id: 1, text: "Privet mir", isComplited: true }];
+import {TODOS} from "../types";
+import uuid from 'uuid'
 
-const todos = (state = initialState, action) => {
-  switch (action.type) {
-    case "COMPLETED_TODO":
-      return [
-        ...state.filter(todo => todo.id !== action.payload.id),
-        { id: action.payload.id, text: action.payload.text, isCompleted: true }
-      ];
-    case "UNCOMPLETED_TODO":
-      return [
-        ...state.filter(todo => todo.id !== action.payload.id),
-        { id: action.payload.id, text: action.payload.text, isCompleted: false }
-      ];
+const toggleCompleteState = (todos, { id: payloadID }, isComplete) => todos.map(todo => ({
+  ...todo,
+  isCompleted: todo.id === payloadID ? isComplete : todo.isCompleted
+}))
+
+const todos = (todosState = [], { type, payload }) => {
+  switch (type) {
+    case TODOS.ADD_TODO:
+      return [...todosState, {
+        id: uuid(),
+        text: payload.inputValue,
+        isCompleted: false
+      }];
+
+    case TODOS.COMPLETE_TODO:
+      return toggleCompleteState(todosState, payload, true);
+
+    case TODOS.UNCOMPLETED_TODO:
+      return toggleCompleteState(todosState, payload, false);
+
     default:
-      return state;
+      return todosState;
   }
 };
 

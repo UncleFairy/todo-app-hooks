@@ -1,0 +1,32 @@
+.todoInput-wrapper {
+  width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+.todoInput-input {
+  border: 1px solid #b2b8b4;
+  width: 600px;
+  height: 65px;
+  background: white;
+  overflow: hidden;
+  font-size: 32px;
+  padding: 8px 14px;
+  font-family: "Pacifico", cursive;
+  opacity: 0.8;
+}
+.todoInput-error p{
+  margin: 15px auto;
+  width: 600px;
+  color: #e68477;
+  font-size: 20px;
+  font-family: 'Pacifico', cursive;
+}
+
+.todoInput-input:active{
+  outline: none;
+}
+.todoInput-input::placeholder {
+  color: black;
+  opacity: 0.7;
+}

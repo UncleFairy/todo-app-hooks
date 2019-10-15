@@ -5,13 +5,13 @@ import { connect } from "react-redux";
 import { completeTodo, uncompleteTodo } from "./actions";
 import PropTypes from "prop-types";
 
-function Todo(props) {
+export function Todo(props) {
   const [isCompleted, setIsCompleted] = useState(props.isCompleted);
 
   const handleChangeIsCompleted = status => () => {
     setIsCompleted(status);
-    if (status) props.completed(props.id, props.text);
-    else props.uncompleted(props.id, props.text);
+    if (status) props.completeTodo(props.id, props.text);
+    else props.uncompleteTodo(props.id, props.text);
   };
 
   return (
@@ -49,14 +49,14 @@ Todo.propTypes = {
   id: PropTypes.number.isRequired,
   isCompleted: PropTypes.bool.isRequired,
   text: PropTypes.string.isRequired,
-  completed: PropTypes.func.isRequired,
-  uncompleted: PropTypes.func.isRequired
+  completeTodo: PropTypes.func.isRequired,
+  uncompleteTodo: PropTypes.func.isRequired
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    completed: (id, text) => dispatch(completeTodo(id, text)),
-    uncompleted: (id, text) => dispatch(uncompleteTodo(id, text))
+    completeTodo: (id, text) => dispatch(completeTodo(id, text)),
+    uncompleteTodo: (id, text) => dispatch(uncompleteTodo(id, text))
   };
 };
 
