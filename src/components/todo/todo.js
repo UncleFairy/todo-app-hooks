@@ -1,12 +1,22 @@
-import React, { useState } from "react";
-import { IoMdClose, IoMdCheckmark } from "react-icons/io";
+import React, { useState, useEffect } from "react";
+import {
+  IoMdClose,
+  IoIosCheckboxOutline,
+  IoMdSquareOutline
+} from "react-icons/io";
 import "./styles.css";
 import { connect } from "react-redux";
-import { completeTodo, uncompleteTodo } from "./actions";
+import { completeTodo, uncompleteTodo, removeTodo } from "./actions";
 import PropTypes from "prop-types";
 
 export function Todo(props) {
   const [isCompleted, setIsCompleted] = useState(props.isCompleted);
+  const [todoWrapper, setTodoWrapper] = useState("todo-wrapper");
+
+  useEffect(() => {
+    if (props.isCompleted) setTodoWrapper("todo-wrapper completed");
+    else setTodoWrapper("todo-wrapper");
+  }, [props.isCompleted]);
 
   const handleChangeIsCompleted = status => () => {
     setIsCompleted(status);
@@ -14,16 +24,24 @@ export function Todo(props) {
     else props.uncompleteTodo(props.id, props.text);
   };
 
+  const deleteTodo = () => props.removeTodo(props.id);
+
   return (
-    <div className="todo-wrapper">
+    <div
+      className={props.isCompleted ? "todo-wrapper completed" : "todo-wrapper"}
+    >
       <div className="container">
         <div className="row">
           <div className="col-sm-1 nopadding">
             <button
               className="full-width todo-element-height todo-button"
-              onClick={handleChangeIsCompleted(true)}
+              onClick={handleChangeIsCompleted(!isCompleted)}
             >
-              <IoMdCheckmark className="todo-button-image" />
+              {props.isCompleted ? (
+                <IoIosCheckboxOutline className="todo-button-image" />
+              ) : (
+                <IoMdSquareOutline className="todo-button-image" />
+              )}
             </button>
           </div>
           <div className="col-sm-10 nopadding">
@@ -34,7 +52,7 @@ export function Todo(props) {
           <div className="col-sm-1 nopadding">
             <button
               className="full-width todo-element-height todo-button"
-              onClick={handleChangeIsCompleted(false)}
+              onClick={deleteTodo}
             >
               <IoMdClose className="todo-button-image" />
             </button>
@@ -46,18 +64,18 @@ export function Todo(props) {
 }
 
 Todo.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   isCompleted: PropTypes.bool.isRequired,
   text: PropTypes.string.isRequired,
   completeTodo: PropTypes.func.isRequired,
-  uncompleteTodo: PropTypes.func.isRequired
+  uncompleteTodo: PropTypes.func.isRequired,
+  removeTodo: PropTypes.func.isRequired
 };
 
-const mapDispatchToProps = dispatch => {
-  return {
-    completeTodo: (id, text) => dispatch(completeTodo(id, text)),
-    uncompleteTodo: (id, text) => dispatch(uncompleteTodo(id, text))
-  };
+const mapDispatchToProps = {
+  completeTodo,
+  uncompleteTodo,
+  removeTodo
 };
 
 export default connect(

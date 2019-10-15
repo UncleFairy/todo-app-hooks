@@ -42,3 +42,11 @@
 .full-width {
   width: 100%;
 }
+
+.completed, .completed div div div button {
+  background: lawngreen;
+}
+
+.completed div div div p{
+  text-decoration: line-through;
+}

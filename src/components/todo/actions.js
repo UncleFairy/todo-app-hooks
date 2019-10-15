@@ -13,3 +13,11 @@ export const uncompleteTodo = id => ({
     id
   }
 });
+
+export const removeTodo = todoId => ({
+  type: TODOS.REMOVE_TODO,
+  payload: {
+    todoId
+  }
+})
+
