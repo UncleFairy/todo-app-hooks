@@ -2,13 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c98b23ed-d769-4480-9cae-27d6f079bc48" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/todoFilter/actions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/todoFilter/reducers/todoFilter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/todoFilter/selectors/todo-selectors.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/todoFilter/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/todoFilter/todoFilter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/todo/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todo/actions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/todo/reducers/todo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todo/reducers/todo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/todo/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todo/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/todo/todo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todo/todo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/todo/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todo/types.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/todoInput/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todoInput/actions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/todoList/todoList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todoList/todoList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/rootReducer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,6 +26,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -31,7 +38,8 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/todo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/todoFilter/reducers" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -43,11 +51,12 @@
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\dpislari\AppData\Roaming\npm\node_modules\prettier" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\dpislari\WebstormProjects\todo-app-hooks\src\components\todo" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\dpislari\WebstormProjects\todo-app-hooks\src\components\todoList" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dpislari\WebstormProjects\todo-app-hooks\src\components\todoFilter\reducers" />
+      <recent name="C:\Users\dpislari\WebstormProjects\todo-app-hooks\src\components\todo" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -92,7 +101,7 @@
       <workItem from="1570698318327" duration="914000" />
       <workItem from="1570699254216" duration="534000" />
       <workItem from="1570699813340" duration="22137000" />
-      <workItem from="1570785937694" duration="23292000" />
+      <workItem from="1570785937694" duration="38622000" />
     </task>
     <servers />
   </component>

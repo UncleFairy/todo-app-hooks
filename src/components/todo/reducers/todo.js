@@ -11,12 +11,12 @@ const todos = (todosState = [], { type, payload }) => {
   switch (type) {
     case TODOS.ADD_TODO:
       return [
-        ...todosState,
         {
           id: uuid(),
           text: payload.inputValue,
           isCompleted: false
-        }
+        },
+        ...todosState
       ];
 
     case TODOS.COMPLETE_TODO:
@@ -27,6 +27,9 @@ const todos = (todosState = [], { type, payload }) => {
 
     case TODOS.REMOVE_TODO:
       return todosState.filter(todo => todo.id !== payload.todoId);
+
+      case TODOS.CLEAR_COMPLETED:
+      return todosState.filter(todo => todo.isCompleted !== true);
 
     default:
       return todosState;

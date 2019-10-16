@@ -1,4 +1,4 @@
-import {TODOS} from "./types";
+import { TODOS } from "./types";
 
 export const completeTodo = id => ({
   type: TODOS.COMPLETE_TODO,
@@ -19,5 +19,8 @@ export const removeTodo = todoId => ({
   payload: {
     todoId
   }
-})
+});
 
+export const clearCompleted = () => ({
+  type: TODOS.CLEAR_COMPLETED
+});
