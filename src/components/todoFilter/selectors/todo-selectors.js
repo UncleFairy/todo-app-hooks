@@ -1,9 +1,12 @@
-const getTodos = state => state.todos
+import { createSelector } from "reselect";
 
-const isNotCompleted = todo => !todo.isCompleted
+const getTodos = state => state.todos;
 
-export const getCounter = state => {
-    const todos = getTodos(state)
-    const uncompletedTodos = todos.filter(isNotCompleted)
-    return uncompletedTodos.length
-}
+export const getCounter = createSelector(
+  getTodos,
+  todos => todos.filter(todo => !todo.isCompleted).length
+);
+export const getTodoCount = createSelector(
+  getTodos,
+  todos => todos.length
+);

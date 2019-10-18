@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import TodoList from "./components/todoList/todoList";
 import TodoInput from "./components/todoInput/todoInput";
+import TodoFilter from "./components/todoFilter/todoFilter";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       </h1>
       <TodoInput />
       <TodoList />
+      <TodoFilter />
     </div>
   );
 }

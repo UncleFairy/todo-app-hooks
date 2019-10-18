@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { addFilter } from "./actions";
 import { clearCompleted } from "../todo/actions";
 import "./styles.css";
-import { getCounter } from "./selectors/todo-selectors";
+import { getCounter, getTodoCount } from "./selectors/todo-selectors";
 import PropTypes from "prop-types";
 import { STYLES } from "../types";
 import classnames from "classnames";
@@ -14,12 +14,17 @@ function TodoFilter(props) {
 
   const handleChangeFilter = ({ target: { value } }) => {
     setClassName(value);
+    props.addFilter(value);
   };
 
   const clearCompletedTodo = () => props.clearCompleted();
 
   return (
-    <div>
+    <div
+      className={classnames({
+        [STYLES.CLASSES.DISPLAY_NONE]: !props.isDisplayFilter
+      })}
+    >
       <div className="todoInput-wrapper">
         <div className="container">
           <div className="row">
@@ -70,7 +75,8 @@ function TodoFilter(props) {
 TodoFilter.propTypes = {
   addFilter: PropTypes.func.isRequired,
   clearCompleted: PropTypes.func.isRequired,
-  counter: PropTypes.number.isRequired
+  counter: PropTypes.number.isRequired,
+  isDisplayFilter: PropTypes.number.isRequired
 };
 
 const matchDispatchToProps = {
@@ -79,7 +85,8 @@ const matchDispatchToProps = {
 };
 
 const mapStateToProps = state => ({
-  counter: getCounter(state)
+  counter: getCounter(state),
+  isDisplayFilter: getTodoCount(state)
 });
 
 export default connect(

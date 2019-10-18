@@ -2,17 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c98b23ed-d769-4480-9cae-27d6f079bc48" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/types.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/todo/todo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todo/todo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/todoFilter/reducers/todoFilter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todoFilter/reducers/todoFilter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/todoFilter/selectors/todo-selectors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todoFilter/selectors/todo-selectors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/todoFilter/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todoFilter/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/todoFilter/todoFilter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todoFilter/todoFilter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/todoInput/todoInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todoInput/todoInput.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/todoList/selectors/todo-selectors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todoList/selectors/todo-selectors.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/todoList/todoList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todoList/todoList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/todoList/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todoFilter/types.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/types.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
