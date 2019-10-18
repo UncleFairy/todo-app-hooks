@@ -8,6 +8,7 @@ import "./styles.css";
 import { connect } from "react-redux";
 import { completeTodo, uncompleteTodo, removeTodo } from "./actions";
 import PropTypes from "prop-types";
+import { STYLES } from "../types";
 
 export function Todo(props) {
   const [isCompleted, setIsCompleted] = useState(props.isCompleted);
@@ -22,7 +23,11 @@ export function Todo(props) {
 
   return (
     <div
-      className={props.isCompleted ? "todo-wrapper completed" : "todo-wrapper"}
+      className={
+        props.isCompleted
+          ? STYLES.CLASSES.TODO_WRAPPER_COMPLETED
+          : STYLES.CLASSES.TODO_WRAPPER
+      }
     >
       <div className="container">
         <div className="row">

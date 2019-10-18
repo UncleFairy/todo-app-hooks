@@ -4,11 +4,10 @@ import Todo from "../todo/todo";
 import TodoFilter from "../todoFilter/todoFilter";
 import PropTypes from "prop-types";
 import { filterByIsCompletedStatus } from "./selectors/todo-selectors";
-import { FILTERS } from "./types";
+import { FILTERS } from "../todoFilter/types";
 
 function TodoList({ todos, filter, filterByIsCompletedStatus }) {
   const [todoFilter, setTodoFilter] = useState("");
-
   useEffect(() => {
     todos.length ? setTodoFilter(<TodoFilter />) : setTodoFilter("");
   }, [todos]);
@@ -52,10 +51,13 @@ TodoList.propTypes = {
   filterByIsCompletedStatus: PropTypes.func.isRequired
 };
 
-const mapStateToProps = state => ({
-  todos: state.todos,
-  filter: state.filter,
-  filterByIsCompletedStatus: status => filterByIsCompletedStatus(state, status)
-});
+const mapStateToProps = state => {
+  return {
+    todos: state.todos,
+    filter: state.filter,
+    filterByIsCompletedStatus: status =>
+      filterByIsCompletedStatus(state, status)
+  };
+};
 
 export default connect(mapStateToProps)(TodoList);

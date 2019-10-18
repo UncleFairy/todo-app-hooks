@@ -44,12 +44,11 @@ function TodoInput(props) {
   );
 }
 
-// const mapDispatchToProps = dispatch => ({
-//   addTodo: inputValue => dispatch(addTodo(inputValue))
-// });
-
 const mapDispatchToProps = {
   addTodo
 };
 
-export default connect(null, mapDispatchToProps)(TodoInput);
+export default connect(
+  null,
+  mapDispatchToProps
+)(TodoInput);

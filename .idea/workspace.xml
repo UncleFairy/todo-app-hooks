@@ -2,11 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c98b23ed-d769-4480-9cae-27d6f079bc48" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/types.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/todo/todo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todo/todo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/todoFilter/reducers/todoFilter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todoFilter/reducers/todoFilter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/todoFilter/todoFilter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todoFilter/todoFilter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/todoInput/todoInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todoInput/todoInput.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/todoList/todoList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todoList/todoList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/todoList/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todoFilter/types.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,14 +47,16 @@
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\dpislari\AppData\Roaming\npm\node_modules\prettier" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\dpislari\WebstormProjects\todo-app-hooks\src\components\todoList" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\dpislari\WebstormProjects\todo-app-hooks\src\components\todoFilter\reducers" />
       <recent name="C:\Users\dpislari\WebstormProjects\todo-app-hooks\src\components\todo" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dpislari\WebstormProjects\todo-app-hooks\src\components\todoFilter" />
+      <recent name="C:\Users\dpislari\WebstormProjects\todo-app-hooks\src\components\todoList" />
     </key>
   </component>
   <component name="RunDashboard">
