@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import { addFilter } from "./actions";
 import { clearCompleted } from "../todo/actions";

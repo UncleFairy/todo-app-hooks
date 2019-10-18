@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   IoMdClose,
   IoIosCheckboxOutline,
@@ -11,12 +11,6 @@ import PropTypes from "prop-types";
 
 export function Todo(props) {
   const [isCompleted, setIsCompleted] = useState(props.isCompleted);
-  const [todoWrapper, setTodoWrapper] = useState("todo-wrapper");
-
-  useEffect(() => {
-    if (props.isCompleted) setTodoWrapper("todo-wrapper completed");
-    else setTodoWrapper("todo-wrapper");
-  }, [props.isCompleted]);
 
   const handleChangeIsCompleted = status => () => {
     setIsCompleted(status);

@@ -14,13 +14,18 @@ function TodoList({ todos, filter, filterByIsCompletedStatus }) {
   }, [todos]);
 
   const allTodo = todos.map(todo => (
-    <Todo id={todo.id} text={todo.text} isCompleted={todo.isCompleted} />
+    <Todo
+      id={todo.id}
+      text={todo.text}
+      isCompleted={todo.isCompleted}
+      key={todo.id}
+    />
   ));
 
   const wrapper = elements => (
     <Fragment>
-      {elements.map(element => (
-        <div>{element}</div>
+      {elements.map((element, index) => (
+        <div key={index}>{element}</div>
       ))}
     </Fragment>
   );
@@ -28,10 +33,8 @@ function TodoList({ todos, filter, filterByIsCompletedStatus }) {
   switch (filter) {
     case FILTERS.ACTIVE:
       return wrapper([filterByIsCompletedStatus(false), todoFilter]);
-      break;
     case FILTERS.COMPLETED:
       return wrapper([filterByIsCompletedStatus(true), todoFilter]);
-      break;
     default:
       return wrapper([allTodo, todoFilter]);
   }
