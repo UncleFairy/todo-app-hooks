@@ -1,8 +1,11 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { useEffect, useState, Fragment } from "react";
 import { connect } from "react-redux";
 import Todo from "../todo/todo";
 import TodoFilter from "../todoFilter/todoFilter";
+import Wrapper from "../../comon/components/wrapper";
 import PropTypes from "prop-types";
+import { Droppable, DragDropContext } from "react-beautiful-dnd";
+
 import { filterByIsCompletedStatus } from "./selectors/todo-selectors";
 import { FILTERS } from "./types";
 
@@ -13,27 +16,51 @@ function TodoList({ todos, filter, filterByIsCompletedStatus }) {
     todos.length ? setTodoFilter(<TodoFilter />) : setTodoFilter("");
   }, [todos]);
 
-  const allTodo = todos.map(todo => (
-    <Todo id={todo.id} text={todo.text} isCompleted={todo.isCompleted} />
+  const allTodo = todos.map((todo, index) => (
+    <Todo
+      id={todo.id}
+      key={todo.id}
+      text={todo.text}
+      isCompleted={todo.isCompleted}
+      index={index}
+    />
   ));
+  const onDragEnd = result => "cucu";
 
   const wrapper = elements => (
-    <Fragment>
+    <DragDropContext onDragEnd={onDragEnd}>
       {elements.map(element => (
         <div>{element}</div>
       ))}
-    </Fragment>
+      ;
+    </DragDropContext>
+  );
+
+  const addDroppable = element => (
+    <Droppable droppbleId={"drop1"}>
+      {provided => (
+        <Wrapper innerRef={provided.innerRef} {...provided.droppableProps}>
+          {element}
+        </Wrapper>
+      )}
+    </Droppable>
   );
 
   switch (filter) {
     case FILTERS.ACTIVE:
-      return wrapper([filterByIsCompletedStatus(false), todoFilter]);
+      return wrapper([
+        addDroppable(filterByIsCompletedStatus(false)),
+        todoFilter
+      ]);
       break;
     case FILTERS.COMPLETED:
-      return wrapper([filterByIsCompletedStatus(true), todoFilter]);
+      return wrapper([
+        addDroppable(filterByIsCompletedStatus(true)),
+        todoFilter
+      ]);
       break;
     default:
-      return wrapper([allTodo, todoFilter]);
+      return wrapper([addDroppable(allTodo), todoFilter]);
   }
 }
 

@@ -3,3 +3,7 @@ export const FILTERS = {
   COMPLETED: "completed",
   ALL: "all"
 };
+
+export const ItemTypes = {
+  TODO: 'todo',
+}

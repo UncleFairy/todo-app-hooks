@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c98b23ed-d769-4480-9cae-27d6f079bc48" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/todoList/selectors/todo-selectors.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/todoList/types.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/comon/components/wrapper.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/todo/todo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todo/todo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/todoList/todoList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todoList/todoList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/todoList/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todoList/types.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +95,8 @@
       <workItem from="1570698318327" duration="914000" />
       <workItem from="1570699254216" duration="534000" />
       <workItem from="1570699813340" duration="22137000" />
-      <workItem from="1570785937694" duration="40122000" />
+      <workItem from="1570785937694" duration="46897000" />
+      <workItem from="1571307887409" duration="4243000" />
     </task>
     <servers />
   </component>
@@ -111,5 +115,17 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/todo/todo.js</url>
+          <line>1</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

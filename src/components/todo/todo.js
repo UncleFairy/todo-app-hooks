@@ -7,16 +7,12 @@ import {
 import "./styles.css";
 import { connect } from "react-redux";
 import { completeTodo, uncompleteTodo, removeTodo } from "./actions";
+import { Draggable } from "react-beautiful-dnd";
 import PropTypes from "prop-types";
+import Wrapper from "../../comon/components/wrapper";
 
 export function Todo(props) {
   const [isCompleted, setIsCompleted] = useState(props.isCompleted);
-  const [todoWrapper, setTodoWrapper] = useState("todo-wrapper");
-
-  useEffect(() => {
-    if (props.isCompleted) setTodoWrapper("todo-wrapper completed");
-    else setTodoWrapper("todo-wrapper");
-  }, [props.isCompleted]);
 
   const handleChangeIsCompleted = status => () => {
     setIsCompleted(status);
@@ -27,39 +23,51 @@ export function Todo(props) {
   const deleteTodo = () => props.removeTodo(props.id);
 
   return (
-    <div
-      className={props.isCompleted ? "todo-wrapper completed" : "todo-wrapper"}
-    >
-      <div className="container">
-        <div className="row">
-          <div className="col-sm-1 nopadding">
-            <button
-              className="full-width todo-element-height todo-button"
-              onClick={handleChangeIsCompleted(!isCompleted)}
-            >
-              {props.isCompleted ? (
-                <IoIosCheckboxOutline className="todo-button-image" />
-              ) : (
-                <IoMdSquareOutline className="todo-button-image" />
-              )}
-            </button>
+    <Draggable draggableId={props.id} index={props.index}>
+      {provided => (
+        <Wrapper
+          {...provided.draggableProps}
+          {...provided.dragHandleProps}
+          innerRef={provided.innerRef}
+        >
+          <div
+            className={
+              props.isCompleted ? "todo-wrapper completed" : "todo-wrapper"
+            }
+          >
+            <div className="container">
+              <div className="row">
+                <div className="col-sm-1 nopadding">
+                  <button
+                    className="full-width todo-element-height todo-button"
+                    onClick={handleChangeIsCompleted(!isCompleted)}
+                  >
+                    {props.isCompleted ? (
+                      <IoIosCheckboxOutline className="todo-button-image" />
+                    ) : (
+                      <IoMdSquareOutline className="todo-button-image" />
+                    )}
+                  </button>
+                </div>
+                <div className="col-sm-10 nopadding">
+                  <p className="full-width todo-element-height todo-p">
+                    {props.text}
+                  </p>
+                </div>
+                <div className="col-sm-1 nopadding">
+                  <button
+                    className="full-width todo-element-height todo-button"
+                    onClick={deleteTodo}
+                  >
+                    <IoMdClose className="todo-button-image" />
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="col-sm-10 nopadding">
-            <p className="full-width todo-element-height todo-p">
-              {props.text}
-            </p>
-          </div>
-          <div className="col-sm-1 nopadding">
-            <button
-              className="full-width todo-element-height todo-button"
-              onClick={deleteTodo}
-            >
-              <IoMdClose className="todo-button-image" />
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+        </Wrapper>
+      )}
+    </Draggable>
   );
 }
 
