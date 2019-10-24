@@ -1,20 +1,41 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import { connect } from "react-redux";
 import Todo from "../todo/todo";
 import PropTypes from "prop-types";
 import { filterByIsCompletedStatus } from "./selectors/todo-selectors";
+import update from "immutability-helper";
 
 function TodoList({ todos }) {
-  const allTodos = todos.map(todo => (
+  const [todosList, setTodosList] = useState(todos);
+
+  useEffect(() => {
+    setTodosList(todos);
+  }, [todos]);
+
+  const moveTodo = useCallback(
+    (dragIndex, hoverIndex) => {
+      const dragCard = todosList[dragIndex];
+      setTodosList(
+        update(todosList, {
+          $splice: [[dragIndex, 1], [hoverIndex, 0, dragCard]]
+        })
+      );
+    },
+    [todosList]
+  );
+
+  const renderTodo = (todo, index) => (
     <Todo
       id={todo.id}
+      index={index}
       text={todo.text}
       isCompleted={todo.isCompleted}
       key={todo.id}
+      moveTodo={moveTodo}
     />
-  ));
+  );
 
-  return allTodos;
+  return todosList.map((todo, index) => renderTodo(todo, index));
 }
 
 TodoList.propTypes = {
