@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { addTodo } from "./actions";
 import "./styles.css";
+import PropTypes from "prop-types";
 
-function TodoInput(props) {
+function TodoInput({ addTodo }) {
   const [inputValue, setInputValue] = useState("");
   const [inputError, setInputError] = useState("");
 
@@ -19,7 +20,7 @@ function TodoInput(props) {
     } else if (!(inputValue.length > 5)) {
       setInputError("Your task is too short :(");
     } else {
-      props.addTodo(inputValue);
+      addTodo(inputValue);
       setInputValue("");
     }
   };
@@ -43,6 +44,10 @@ function TodoInput(props) {
     </div>
   );
 }
+
+TodoInput.propTypes = {
+  isCompleted: PropTypes.func.isRequired
+};
 
 const mapDispatchToProps = {
   addTodo

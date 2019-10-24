@@ -21,7 +21,7 @@ function App() {
         >
           todos
         </h1>
-
+        <FactHeader />
         <TodoInput />
         <TodoList />
         <TodoFilter />

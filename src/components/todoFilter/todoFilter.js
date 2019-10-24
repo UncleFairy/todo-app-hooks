@@ -9,27 +9,27 @@ import { STYLES } from "../types";
 import classnames from "classnames";
 import { FILTERS } from "./types";
 
-function TodoFilter(props) {
+function TodoFilter({ addFilter, clearCompleted, counter, isDisplayFilter }) {
   const [activeButtonClassname, setClassName] = useState("");
 
   const handleChangeFilter = ({ target: { value } }) => {
     setClassName(value);
-    props.addFilter(value);
+    addFilter(value);
   };
 
-  const clearCompletedTodo = () => props.clearCompleted();
+  const clearCompletedTodo = () => clearCompleted();
 
   return (
     <div
       className={classnames({
-        [STYLES.CLASSES.DISPLAY_NONE]: !props.isDisplayFilter
+        [STYLES.CLASSES.DISPLAY_NONE]: !isDisplayFilter
       })}
     >
       <div className="todoInput-wrapper">
         <div className="container">
           <div className="row">
             <div className="col-sm-3">
-              <p>{props.counter} items left</p>
+              <p>{counter} items left</p>
             </div>
             <div className="col-sm-5 types">
               <button

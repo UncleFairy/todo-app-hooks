@@ -5,15 +5,21 @@
   "dependencies": {
     "@babel/polyfill": "^7.6.0",
     "@material-ui/core": "^4.5.0",
+    "axios": "^0.19.0",
     "classnames": "^2.2.6",
+    "immutability-helper": "^3.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.10.2",
+    "react-dnd": "^9.4.0",
+    "react-dnd-html5-backend": "^9.4.0",
     "react-dom": "^16.10.2",
     "react-icons": "^3.7.0",
     "react-redux": "^7.1.1",
     "react-scripts": "3.2.0",
+    "reactjs-popup": "^1.5.0",
     "reduce-reducers": "^1.0.4",
     "redux": "^4.0.4",
+    "redux-saga": "^1.1.1",
     "reselect": "^4.0.0",
     "uuid": "^3.3.3"
   },
@@ -39,13 +45,7 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "^7.6.4",
-    "@babel/preset-env": "^7.6.3",
-    "@babel/register": "^7.6.2",
-    "babel-jest": "^24.9.0",
-    "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.15.1",
     "jest": "^24.9.0",
-    "redux-devtools": "^3.5.0"
+    "redux-devtools-extension": "^2.13.8"
   }
 }

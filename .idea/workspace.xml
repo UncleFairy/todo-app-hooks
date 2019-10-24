@@ -6,12 +6,16 @@
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/todoFilter/selectors/todo-selectors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todoFilter/selectors/todo-selectors.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/todoFilter/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todoFilter/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/modal/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/modal/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/modal/modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/modal/modal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/modal/reducers/modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/modal/reducers/modal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/modal/sagas.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/modal/sagas.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/modal/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/modal/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/modal/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/modal/types.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/todoFilter/todoFilter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todoFilter/todoFilter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/todoList/selectors/todo-selectors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todoList/selectors/todo-selectors.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/todoList/todoList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todoList/todoList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/types.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/todoInput/todoInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/todoInput/todoInput.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/rootReducer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,7 +39,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/todoFilter/reducers" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -49,13 +53,14 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dpislari\WebstormProjects\todo-app-hooks\src" />
+      <recent name="C:\Users\dpislari\WebstormProjects\todo-app-hooks\src\components\todoFilter" />
+      <recent name="C:\Users\dpislari\WebstormProjects\todo-app-hooks\src\components\todoList" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\dpislari\WebstormProjects\todo-app-hooks\src\components\todoFilter\reducers" />
       <recent name="C:\Users\dpislari\WebstormProjects\todo-app-hooks\src\components\todo" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\dpislari\WebstormProjects\todo-app-hooks\src\components\todoFilter" />
-      <recent name="C:\Users\dpislari\WebstormProjects\todo-app-hooks\src\components\todoList" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -101,6 +106,22 @@
       <workItem from="1570699254216" duration="534000" />
       <workItem from="1570699813340" duration="22137000" />
       <workItem from="1570785937694" duration="40122000" />
+      <workItem from="1571658044509" duration="1603000" />
+      <workItem from="1571660160528" duration="1121000" />
+      <workItem from="1571667940523" duration="1802000" />
+      <workItem from="1571669805444" duration="1798000" />
+      <workItem from="1571671638701" duration="1824000" />
+      <workItem from="1571673496480" duration="1659000" />
+      <workItem from="1571675318534" duration="1780000" />
+      <workItem from="1571677216662" duration="51000" />
+      <workItem from="1571738109957" duration="377000" />
+      <workItem from="1571738558970" duration="597000" />
+      <workItem from="1571740371650" duration="924000" />
+      <workItem from="1571742188253" duration="599000" />
+      <workItem from="1571744220908" duration="270000" />
+      <workItem from="1571816394513" duration="18403000" />
+      <workItem from="1571923279900" duration="695000" />
+      <workItem from="1571927357954" duration="1926000" />
     </task>
     <servers />
   </component>
